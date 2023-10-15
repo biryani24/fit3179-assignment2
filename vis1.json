@@ -6,12 +6,12 @@
     "params": [
       {
         "name": "zoom_level",
-        "value": 200,
+        "value": 80,
         "bind": {
           "input": "range",
-          "min": 200,
-          "max": 2000,
-          "step": 100,
+          "min": 80,
+          "max": 1000,
+          "step": 50,
           "name": "Zoom: "
         }
       },
@@ -22,7 +22,7 @@
           "input": "select",
           "options": [
             [0, 0],
-            [15, 55.0],
+            [10, 55.0],
             [20.0, 0.0],
             [-100, 40.0],
             [105.0, 10.0],
@@ -34,7 +34,7 @@
       }
     ],
     "projection": {
-      "type": "equirectangular",
+      "type": "equalEarth", 
       "center": {"expr": "center_to"},
       "scale": {"expr": "zoom_level"}
     },
@@ -59,6 +59,20 @@
         "encoding": {"tooltip": {"field": "note"}}
       },
       {
+          "data": {
+            "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+            "format": {"type": "topojson", "feature": "oceans"}
+          },
+          "mark": {"type": "geoshape", "fill": "skyblue"}
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
+            "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+          },
+          "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+        },
+      {
         "data": {
           "url": "https://raw.githubusercontent.com/biryani24/fit3179/main/Tests_conducted_13July2020.csv"
         },
@@ -75,13 +89,13 @@
             "as": "geo"
           }
         ],
-        "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+        "mark": {"type": "geoshape", "stroke": "skyblue", "strokeWidth": 0.5},
         "encoding": {
           "shape": {"field": "geo", "type": "geojson"},
           "color": {
             "field": "Positive",
             "type": "quantitative",
-            "scale": {"domain": [0, 4000000], "scheme": "blues"},
+            "scale": {"domain": [0, 4000000], "scheme": "reds"},
             "legend": {"format": ".2s"}
           },
           "tooltip": [
