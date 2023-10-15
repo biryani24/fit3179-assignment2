@@ -56,8 +56,10 @@
         },
       "color": {
         "field": "Continent",
+        "legend":{"orient": "none", "legendX":270, "legendY":5},
         "scale": {
         "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"],
+        
         "domain": ["Asia", "Africa", "Europe", "Latin America and the Caribbean", "Oceania", "Northern America"]
       }
       },
