@@ -5,6 +5,38 @@
     },
     "width": "container",
     "height": 600,
+    "params": [
+        {
+          "name": "select_continent",
+          "bind": {
+            "input": "select",
+            "options": [
+              null,
+              "Asia",
+              "Africa",
+              "Europe",
+              "Latin America and the Caribbean",
+              "Oceania",
+              "Northern America"
+            ],
+            "labels": [
+              "Show All",
+              "Asia",
+              "Africa",
+              "Europe",
+              "Latin America and the Caribbean",
+              "Oceania",
+              "Northern America"
+            ],
+            "name": "Continent: "
+          }
+        }
+      ],
+    "transform": [
+        {
+          "filter": "select_continent == null || datum.Continent == select_continent"
+        }
+      ],
     "mark": {
       "type": "line",
       "interpolate": "monotone"
@@ -25,10 +57,14 @@
         "scale": {"domain": [0, 6286]}
       },
       "color": {
-        "type": "nominal",
         "field": "Continent",
         "title": "Continent",
-        "legend":{"orient": "none", "legendX":10, "legendY":5}
+        "legend":{"orient": "none", "legendX":10, "legendY":5},
+        "scale": {
+            "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"],
+            
+            "domain": ["Asia", "Africa", "Europe", "Latin America and the Caribbean", "Oceania", "Northern America"]
+          }
       },
       "tooltip": [
         { "field": "Country", "title": "Country" },

@@ -56,7 +56,7 @@
         },
       "color": {
         "field": "Continent",
-        "legend":{"orient": "none", "legendX":270, "legendY":5},
+        "legend":{"orient": "none", "legendX":250, "legendY":5},
         "scale": {
         "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"],
         
