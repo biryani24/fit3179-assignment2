@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/biryani24/fit3179/main/COVID-19%20Coronavirus.csv"
+    },
+    "width": "container",
+    "height": 600,
+    "mark": {
+      "type": "line",
+      "interpolate": "monotone"
+    },
+    "encoding": {
+      "x": {
+        "field": "Population",
+        "type": "quantitative",
+        "title": "Population",
+        "axis": {"tickCount": 6},
+        "scale": {"type": "log", "domain": [805, 1439323776]}
+      },
+      "y": {
+        "field": "Total Deaths Per 1M Pop",
+        "type": "quantitative",
+        "title": "Number of Deaths/1M Population",
+        "axis": {"tickCount": 6},
+        "scale": {"domain": [0, 6286]}
+      },
+      "color": {
+        "type": "nominal",
+        "field": "Continent",
+        "title": "Continent",
+        "legend":{"orient": "none", "legendX":10, "legendY":5}
+      },
+      "tooltip": [
+        { "field": "Country", "title": "Country" },
+        { "field": "Total Deaths Per 1M Pop", "title": "Total Deaths/1M Pop" },
+        { "field": "Population", "title": "Population" }
+    ]
+    },
+    "config": {}
+  }

@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/biryani24/fit3179/main/COVID-19%20Coronavirus.csv"
+    },
+    "width": "container",
+    "height": 600,
+    "mark": {"type": "bar", "opacity": 0.85, "stroke": "darkslategray"  },
+    "encoding": {
+      "x": {
+        "field": "Continent",
+        "type": "nominal",
+        "title": "Continent"
+      },
+      "y": {
+        "field": "Cases",
+        "type": "quantitative",
+        "stack": true,
+        "title": "Number of Cases",
+        "scale": {"domain": [1, 180332483]} 
+      },
+      "color": {
+          "type": "nominal",
+          "field": "Continent",
+          "title": "Continent",
+          "legend":{"orient": "none", "legendX":250, "legendY":5}
+        },
+      "tooltip": [
+        {"field": "Country", "title": "Country:"},
+        {"field": "Cases", "title": "Number of Cases:"}
+      ]
+    },
+    "config": {"axisX": {
+        "labelAngle": 45    } }
+  }
