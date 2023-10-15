@@ -3,7 +3,7 @@
     "data": {
       "url": "https://raw.githubusercontent.com/biryani24/fit3179/main/New_Tests_conducted_13July2020.csv"
     },
-    "title": "Correlation Between the Number of Tests & the Number of Positive Cases of COVID-19",
+    "title": "Analysis Of Tests & the Number of Positive Cases",
     "width": "container",
     "height": 400,
     "params": [
