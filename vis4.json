@@ -4,7 +4,7 @@
       "url": "https://raw.githubusercontent.com/biryani24/fit3179/main/COVID-19%20Coronavirus.csv"
     },
     "width": "container",
-    "height": 600,
+    "height": 500,
     "mark": {"type": "bar", "opacity": 0.85, "stroke": "darkslategray"  },
     "encoding": {
       "x": {
