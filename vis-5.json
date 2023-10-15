@@ -3,7 +3,7 @@
     "data": {
       "url": "https://raw.githubusercontent.com/biryani24/fit3179/main/New_Tests_conducted_13July2020.csv"
     },
-    "width": 600,
+    "width": "container",
     "height": 400,
     "params": [
       {

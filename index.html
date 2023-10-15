@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Multiple Visualisations | An Example</title>
+  <title>Multiple Visualizations | An Example</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -21,18 +21,16 @@
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 
-
 </head>
 
 <body>
 
-  <div class="page">
+  <div class="page" style = "background-image: url(https://nwmphn.org.au/wp-content/uploads/2021/02/covid-vaccine-rollout-nwmphn.jpg);">
 
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>Multiple Visualisations</h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
+        <h1 style ="text-align: center;">A Study of COVID-19 Across the World</h1>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -41,15 +39,21 @@
     <div class="pure-g">
       <div class="pure-u-1-2">
         <div class="description description-left">
-          <h2>Two Columns Layout</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          <h2>Background Information on COVID-19</h2>
+          <p>COVID-19, short for Coronavirus Disease 2019, is an infectious disease caused by the novel coronavirus known as SARS-CoV-2. 
+            The virus was first identified in Wuhan, China, in late 2019, and it has since evolved into a global pandemic, significantly 
+            impacting the world's health, economy, and daily life. </p>
+          <p>The World Health Organization (WHO) declared COVID-19 a pandemic on March 11, 2020, 
+            leading to widespread global measures to contain the virus. The number of confirmed cases of COVID-19 worldwide grew rapidly, 
+            with many countries struggling to contain the spread of the virus. </p>
+          <p>Tragically, the pandemic led to a substantial loss of lives. Many people, including the elderly and those with underlying health conditions,
+            were particularly vulnerable to severe illness and mortality. The impact of COVID-19 on mortality rates varied from country to country, depending on factors 
+            like healthcare infrastructure, public health measures, and vaccination rates. </p>  
+        
         </div>
       </div>
       <div class="pure-u-1-2">
-        <div id="vis1" class="vis-container"></div>
+        <div id="vis5" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -65,7 +69,7 @@
         </div>
       </div>
       <div class="pure-u-1-3">
-        <div id="vis4" class="vis-container"></div>
+        <div id="vis4" class= "vis-container"></div>
       </div>
       <div class="pure-u-1-3" style="width: 31.5%;">
         <div id="vis3" class="vis-container" style="margin-left: 15px;"></div>
@@ -87,27 +91,23 @@
             faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
         </div>
       </div>
-
     </div>
     <!-- end pure grid group -->
 
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">FIT3179
-            Teaching Team</a>. The datasource is <a href="#" target=" _blank">some data repository online</href>.</p>
+        <p>This visualization is created by <a href="https://github.com/biryani24/fit3179-assignment2" target="_blank">Xu Zhou Bryan Lee (30822866)</a>. The datasource is <a href="#" target="_blank">some data repository online</a>.</p>
       </div>
     </div>
-
-
-  </div> <!-- end page -->
+  </div>
+  <!-- end page -->
 
   <script type="text/javascript">
     var specVis1 = "./vis1.json";
     var specVis2 = "./vis2.json";
-    var specVis2 = "./vis3.json";
-    var specVis2 = "./vis4.json";
-    var specVis2 = "./vis5.json";
-
+    var specVis3 = "./vis3.json";
+    var specVis4 = "./vis4.json";
+    var specVis5 = "./vis5.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
@@ -123,7 +123,7 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis4', specVis5, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
